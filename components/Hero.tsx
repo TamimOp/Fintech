@@ -14,12 +14,19 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
       />
 
-      {/* Torch Light Effect */}
-      <div className="torch-light-primary"></div>
-      <div className="torch-light-secondary"></div>
+      {/* Full Width Light Background */}
+      <div className="absolute -top-15 left-0 w-full h-full z-5 pointer-events-none">
+        <Image
+          src="/assets/light.png"
+          alt="Light Effect"
+          width={2000}
+          height={1200}
+          className="w-full h-full object-cover opacity-80"
+        />
+      </div>
 
       {/* Content */}
-      <div className="relative z-20 text-center max-w-4xl mx-auto">
+      <div className="relative z-30 text-center max-w-4xl mx-auto">
         <h1 className="text-white text-3xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
           ONE PLATFORM TO POWER <br />
           EVERY FINANCIAL OPERATION IN <br />
@@ -38,13 +45,13 @@ export default function Hero() {
       </div>
 
       {/* Dashboard Image */}
-      <div className="relative z-20 mt-12 w-full max-w-6xl">
+      <div className="relative z-30 mt-12 w-full max-w-6xl">
         <Image
           src="/assets/heroStat.png"
           alt="Dashboard Statistics"
           width={2000}
           height={1200}
-          className="w-full h-auto mx-auto drop-shadow-2xl"
+          className="relative w-full h-auto mx-auto drop-shadow-2xl"
         />
       </div>
     </section>
