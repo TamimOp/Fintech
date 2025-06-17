@@ -1,3 +1,9 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
-  return <div>this is Fintech website</div>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }
