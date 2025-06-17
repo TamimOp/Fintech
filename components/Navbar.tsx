@@ -1,38 +1,36 @@
-"use client";
-
 import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-8 py-4 rounded-full border border-white/30 backdrop-blur-md w-fit mx-auto mt-8">
+    <nav className="fixed left-1/2 transform -translate-x-1/2 flex items-center gap-6 px-6 py-4 rounded-full border border-white/30 backdrop-blur-md mt-8 z-100 w-fit">
       {/* Logo */}
-      <div className="flex items-center">
+      <div className="flex items-center flex-shrink-0 mr-4">
         <Image
           src="/assets/logo.png"
           alt="Logo"
-          width={40}
-          height={40}
+          width={32}
+          height={32}
           className="mr-2"
         />
       </div>
 
       {/* Nav Links */}
-      <ul className="flex items-center gap-8 ml-12">
-        <li className="text-white flex items-center gap-2">
+      <ul className="flex items-center gap-5 flex-shrink-0">
+        <li className="text-white flex items-center gap-2 text-sm">
           <span className="w-2 h-2 bg-cyan-400 rounded-full"></span> Feature
         </li>
-        <li className="text-white">Solution</li>
-        <li className="text-white">Resources</li>
-        <li className="text-white">Pricing</li>
-        <li className="text-white">Login</li>
+        <li className="text-white text-sm">Solution</li>
+        <li className="text-white text-sm">Resources</li>
+        <li className="text-white text-sm">Pricing</li>
+        <li className="text-white text-sm">Login</li>
       </ul>
 
       {/* Buttons */}
-      <div className="flex items-center gap-4 ml-12">
-        <button className="bg-white text-blue-900 rounded-full px-6 py-2 font-medium">
+      <div className="flex items-center gap-3 flex-shrink-0">
+        <button className="bg-white text-blue-900 rounded-full px-5 py-2.5 font-medium text-sm whitespace-nowrap">
           Start free trial
         </button>
-        <button className="border border-white text-white rounded-full px-6 py-2 font-medium">
+        <button className="border border-white text-white rounded-full px-5 py-2.5 font-medium text-sm whitespace-nowrap">
           Book a demo
         </button>
       </div>
