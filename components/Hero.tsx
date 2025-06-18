@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-40 pb-8 ">
       {/* Full Width Light Background */}
-      <div className="absolute top-0 left-0 w-full h-full z-5 pointer-events-none">
+      <div className="absolute top-0 md:-top-35 left-0 w-full h-full z-5 pointer-events-none">
         <Image
           src="/assets/light.png"
           alt="Light Effect"
