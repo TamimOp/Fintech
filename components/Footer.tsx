@@ -35,7 +35,7 @@ const Footer = () => {
       ></div>
 
       {/* Substract SVG behind contents */}
-      <div className="absolute left-[50%] sm:left-[60%] lg:left-85 top-[20%] sm:top-[15%] lg:top-auto z-5 w-[25px] sm:w-[35px] lg:w-[40.657px] h-[25px] sm:h-[35px] lg:h-[40.631px] transform -translate-x-1/2 lg:transform-none">
+      <div className="absolute left-[50%] sm:left-[60%] lg:left-[263px] top-[23%] sm:top-[15%] lg:top-auto z-5 w-[25px] sm:w-[35px] lg:w-[40.657px] h-[25px] sm:h-[35px] lg:h-[40.631px] transform -translate-x-1/2 lg:transform-none">
         <Image
           src="/assets/Subtract.svg"
           alt="Substract"
@@ -49,17 +49,17 @@ const Footer = () => {
       {/* Contents - With background image only behind this section */}
       <div className="max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto relative overflow-hidden rounded-2xl flex flex-col items-center gap-12 sm:gap-16 lg:gap-24 self-stretch z-10">
         {/* Main Content */}
-        <div className="flex flex-col sm:flex-col lg:flex-row justify-center items-start gap-8 sm:gap-12 lg:gap-[139px] self-stretch w-full">
+        <div className="flex flex-col sm:flex-col lg:flex-row justify-center items-center lg:items-start gap-8 sm:gap-12 lg:gap-[139px] self-stretch w-full">
           {/* Company Logo & Description */}
-          <div className="space-y-3 sm:space-y-4 lg:space-y-4 relative z-10 text-center lg:text-left">
+          <div className="space-y-3 sm:space-y-4 lg:space-y-4 relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-auto">
             <Image
               src="/assets/ZyvoLogo.png"
               alt="Zyvo Logo"
               width={40}
               height={40}
-              className="mx-auto lg:mx-0 sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[65px]"
+              className="sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[65px]"
             />
-            <p className="text-sm sm:text-base lg:text-xl text-[#DBDBDB] max-w-[280px] sm:max-w-[400px] lg:max-w-none mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base lg:text-xl text-[#DBDBDB] max-w-[280px] sm:max-w-[400px] lg:max-w-none">
               Just have a business account, credit card, and spend management
               software everything into one hassle free way.
             </p>
