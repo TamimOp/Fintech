@@ -4,9 +4,9 @@ import { Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-[#00174f] to-[#000b3f] text-white py-12 px-6 md:px-16 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-[#00174f] to-[#000b3f] text-white py-12 px-6 md:px-25 overflow-hidden">
       {/* Background Image - Only behind content */}
-      <div className="absolute left-55 top-8 w-[999px] h-[364px] z-0">
+      <div className="absolute left-[220px] top-8 w-[999px] h-[364px] z-0">
         <Image
           src="/assets/footerBgStars.png"
           alt="Footer Background Stars"
@@ -34,9 +34,21 @@ const Footer = () => {
         }}
       ></div>
 
+      {/* Substract SVG behind contents */}
+      <div className="absolute left-85 z-5 w-[40.657px] h-[40.631px]">
+        <Image
+          src="/assets/Subtract.svg"
+          alt="Substract"
+          width={40.657}
+          height={40.631}
+          className="w-full h-full"
+          style={{ fill: "#2FF" }}
+        />
+      </div>
+
       {/* Contents - With background image only behind this section */}
-      <div className="max-w-6xl mx-auto relative overflow-hidden rounded-2xl flex flex-col items-center gap-24 self-stretch">
-        {/* Main Content Grid */}
+      <div className="max-w-7xl mx-auto relative overflow-hidden rounded-2xl flex flex-col items-center gap-24 self-stretch z-10">
+        {/* Main Content */}
         <div className="flex justify-center items-start gap-[139px] self-stretch w-full">
           {/* Company Logo & Description */}
           <div className="space-y-4 relative z-10">
@@ -113,12 +125,12 @@ const Footer = () => {
           {/* Social Media */}
           <div className="relative z-10">
             {/* footerBgStars2 - Bottom left of social media icons */}
-            <div className="absolute -bottom-6 -left-12 z-0">
+            <div className="absolute top-[100px] -left-12 z-0">
               <Image
                 src="/assets/footerBgStars2.png"
                 alt="Footer Background Stars 2"
-                width={100}
-                height={60}
+                width={50}
+                height={56}
                 className="opacity-100"
               />
             </div>
