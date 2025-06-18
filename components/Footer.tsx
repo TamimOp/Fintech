@@ -18,7 +18,7 @@ const Footer = () => {
 
       {/* Custom Ellipse 1 - Left side of footer (shadow glowing) */}
       <div
-        className="absolute top-1/2 -left-[100px] sm:-left-[140px] lg:-left-[187px] -bottom-[14px] transform -translate-y-1/2 z-0 w-[250px] sm:w-[350px] lg:w-[468px] h-[250px] sm:h-[350px] lg:h-[468px] rounded-full"
+        className="absolute top-1/2 -left-[50px] sm:-left-[80px] lg:-left-[187px] lg:-bottom-[14px] transform -translate-y-1/2 z-0 w-[250px] sm:w-[350px] lg:w-[468px] h-[250px] sm:h-[350px] lg:h-[468px] rounded-full"
         style={{
           background: "rgba(0, 149, 255, 0.58)",
           filter: "blur(169.3000030517578px)",
@@ -27,7 +27,7 @@ const Footer = () => {
 
       {/* Custom Ellipse 2 - Top right edge (shadow glowing) */}
       <div
-        className="absolute -top-[80px] sm:-top-[110px] lg:-top-[147px] right-[20px] sm:right-[30px] lg:right-[35px] z-0 w-[180px] sm:w-[250px] lg:w-[322px] h-[180px] sm:h-[250px] lg:h-[322px] rounded-full"
+        className="absolute -top-[50px] sm:-top-[80px] lg:-top-[147px] -right-[50px] sm:-right-[30px] lg:right-[35px] z-0 w-[180px] sm:w-[250px] lg:w-[322px] h-[180px] sm:h-[250px] lg:h-[322px] rounded-full"
         style={{
           background: "rgba(0, 149, 255, 0.58)",
           filter: "blur(169.3000030517578px)",
