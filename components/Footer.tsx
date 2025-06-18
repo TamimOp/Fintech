@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#082E6461] backdrop-blur-md text-white py-12 px-6 md:px-16 overflow-hidden">
+    <footer className="relative bg-[#082e64] backdrop-blur-md text-white py-12 px-6 md:px-16 overflow-hidden">
       {/* Star decorations */}
       <Image
         src="/assets/star.png"

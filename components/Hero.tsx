@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-40 bg-gradient-to-b from-[#000b3f] via-[#00174f] to-[#00174f]">
+    <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-40 pb-8 bg-gradient-to-b from-[#000b3f] via-[#00174f] to-[#00174f]">
       {/* BG Texture Overlay */}
       <Image
         src="/assets/heroBg.png"
@@ -15,7 +15,7 @@ export default function Hero() {
       />
 
       {/* Full Width Light Background */}
-      <div className="absolute -top-15 left-0 w-full h-full z-5 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-full z-5 pointer-events-none">
         <Image
           src="/assets/light.png"
           alt="Light Effect"
@@ -53,6 +53,36 @@ export default function Hero() {
           height={1200}
           className="relative w-full h-auto mx-auto drop-shadow-2xl"
         />
+      </div>
+
+      {/* Company Logos Section (Within same section) */}
+      <div className="relative z-30 mt-16 w-screen -mx-4 md:-mx-8">
+        <div
+          className="relative w-full py-6"
+          style={{ background: "#082E6459" }}
+        >
+          {/* Company Background Image */}
+          <Image
+            src="/assets/companyBg.png"
+            alt="Company Background"
+            fill
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-5"
+          />
+
+          {/* Company Logos */}
+          <div className="relative z-10 flex items-center justify-center gap-12 md:gap-20 lg:gap-24 px-8">
+            {[1, 2, 3, 4, 5].map((num) => (
+              <Image
+                key={num}
+                src={`/assets/company${num}.png`}
+                alt={`Company ${num}`}
+                width={120}
+                height={60}
+                className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
