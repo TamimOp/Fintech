@@ -1,37 +1,48 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Linkedin, Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#082e64] backdrop-blur-md text-white py-12 px-6 md:px-16 overflow-hidden">
-      {/* Star decorations */}
-      <Image
-        src="/assets/star.png"
-        alt="Star"
-        width={20}
-        height={20}
-        className="absolute top-10 left-10 animate-pulse"
-      />
-      <Image
-        src="/assets/star.png"
-        alt="Star"
-        width={20}
-        height={20}
-        className="absolute top-20 right-32 animate-ping"
-      />
-      <Image
-        src="/assets/star.png"
-        alt="Star"
-        width={20}
-        height={20}
-        className="absolute bottom-16 right-1/3 animate-spin"
-      />
+    <footer className="relative bg-gradient-to-b from-[#00174f] to-[#000b3f] text-white py-12 px-6 md:px-16 overflow-hidden">
+      {/* Background Image - Only behind content */}
+      <div className="absolute inset-0 w-full z-0">
+        <Image
+          src="/assets/footerBgStars.png"
+          alt="Footer Background Stars"
+          fill
+          className="object-contain opacity-100"
+        />
+      </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+      {/* footerEllipse1 - Left side of footer (shadow glowing) */}
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-0">
+        <Image
+          src="/assets/footerEllipse1.png"
+          alt="Footer Ellipse 1"
+          width={468}
+          height={449}
+          className="opacity-100"
+        />
+      </div>
+
+      {/* footerEllipse2 - Top right edge (shadow glowing) */}
+      <div className="absolute top-0 right-0 z-0">
+        <Image
+          src="/assets/footerEllipse2.png"
+          alt="Footer Ellipse 2"
+          width={320}
+          height={350}
+          className="opacity-100"
+        />
+      </div>
+
+      {/* Contents - With background image only behind this section */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative overflow-hidden rounded-2xl">
         {/* Company Logo & Description */}
-        <div className="space-y-4">
+        <div className="space-y-4 relative z-10">
           <Image
-            src="/assets/logo.png"
+            src="/assets/ZyvoLogo.png"
             alt="Zyvo Logo"
             width={50}
             height={50}
@@ -43,58 +54,85 @@ const Footer = () => {
         </div>
 
         {/* Product Links */}
-        <div>
+        <div className="relative z-10">
           <h3 className="text-lg font-semibold mb-4">Product</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <Link href="#">Features</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Features
+              </Link>
             </li>
             <li>
-              <Link href="#">Pricing</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Pricing
+              </Link>
             </li>
             <li>
-              <Link href="#">Blog</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Blog
+              </Link>
             </li>
             <li>
-              <Link href="#">Request a demo</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Request a demo
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Company Links */}
-        <div>
+        <div className="relative z-10">
           <h3 className="text-lg font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <Link href="#">Cover</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Cover
+              </Link>
             </li>
             <li>
-              <Link href="#">Support Center</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Support Center
+              </Link>
             </li>
             <li>
-              <Link href="#">Privacy & Policy</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Privacy & Policy
+              </Link>
             </li>
             <li>
-              <Link href="#">Terms & Condition</Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                Terms & Condition
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Social Media */}
-        <div>
+        <div className="relative z-10">
+          {/* footerBgStars2 - Bottom left of social media icons */}
+          <div className="absolute -bottom-6 -left-12 z-0">
+            <Image
+              src="/assets/footerBgStars2.png"
+              alt="Footer Background Stars 2"
+              width={100}
+              height={60}
+              className="opacity-100"
+            />
+          </div>
+
           <h3 className="text-lg font-semibold mb-4">Social Media</h3>
           <div className="flex space-x-4 text-blue-400 text-xl">
-            <a href="#">
-              <i className="fab fa-linkedin" />
+            <a href="#" className="hover:text-blue-300 transition-colors">
+              <Linkedin size={24} />
             </a>
-            <a href="#">
-              <i className="fab fa-facebook" />
+            <a href="#" className="hover:text-blue-300 transition-colors">
+              <Facebook size={24} />
             </a>
-            <a href="#">
-              <i className="fab fa-instagram" />
+            <a href="#" className="hover:text-blue-300 transition-colors">
+              <Instagram size={24} />
             </a>
-            <a href="#">
-              <i className="fab fa-x-twitter" />
+            <a href="#" className="hover:text-blue-300 transition-colors">
+              <Twitter size={24} />
             </a>
           </div>
         </div>
