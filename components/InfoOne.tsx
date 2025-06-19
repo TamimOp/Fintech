@@ -17,37 +17,40 @@ export default function InfoOne() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
         {/* Left Side: Phones with BG */}
         <div className="flex justify-center items-center flex-shrink-0 w-full max-w-[588px] h-[500px] lg:h-[691px] bg-gradient-to-br from-[#043a72] to-[#032d5a] rounded-3xl shadow-2xl z-0 border border-blue-500/20">
-          <div className="relative w-full h-full flex justify-center items-center">
+          <div className="relative w-full h-full flex justify-center items-end">
             {/* Subtle glow effect */}
             <div className="absolute inset-4 bg-blue-400/10 rounded-3xl blur-xl z-0" />
 
             {/* iPhone Container */}
-            <div className="relative w-full h-full flex items-center justify-center p-4">
-              {/* iPhone 1 - Left */}
+            <div className="relative w-[300px] h-full flex items-end justify-center p-8">
+              {/* iPhone 1 - Back (rightmost) */}
               <Image
                 src="/assets/iphone1.png"
                 alt="iPhone 1"
-                width={160}
-                height={320}
-                className="absolute -rotate-[12deg] -translate-x-12 md:-translate-x-16 translate-y-4 z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-auto h-auto max-h-[280px] lg:max-h-[320px]"
+                width={290}
+                height={595}
+                className="absolute z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                style={{ right: "0px", bottom: "32px" }}
               />
 
-              {/* iPhone 2 - Center (Main) */}
+              {/* iPhone 2 - Middle */}
               <Image
                 src="/assets/iphone2.png"
                 alt="iPhone 2"
-                width={180}
-                height={360}
-                className="relative z-20 drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-auto h-auto max-h-[320px] lg:max-h-[360px]"
+                width={290}
+                height={595}
+                className="absolute z-20 drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                style={{ right: "15px", bottom: "32px" }}
               />
 
-              {/* iPhone 3 - Right */}
+              {/* iPhone 3 - Front (leftmost) */}
               <Image
                 src="/assets/iphone3.png"
                 alt="iPhone 3"
-                width={160}
-                height={320}
-                className="absolute rotate-[12deg] translate-x-12 md:translate-x-16 translate-y-4 z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-auto h-auto max-h-[280px] lg:max-h-[320px]"
+                width={290}
+                height={595}
+                className="absolute z-30 drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                style={{ right: "30px", bottom: "32px" }}
               />
             </div>
           </div>
