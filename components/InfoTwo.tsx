@@ -24,19 +24,56 @@ export default function InfoTwo() {
 
       {/* Main Container */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-6 sm:gap-8 lg:gap-16">
-        {/* Right Side: InfoTwoStat.png with same bg as InfoOne */}
-        <div className="flex justify-center items-center flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[588px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[691px] bg-gradient-to-br from-[#043a72] to-[#032d5a] rounded-2xl sm:rounded-3xl shadow-2xl z-0 border border-blue-500/20">
-          <div className="relative w-full h-full flex justify-center items-center">
+        {/* Right Side: Single Background with Three Statistics Images */}
+        <div className="group flex justify-center items-center flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[588px] h-[450px] sm:h-[550px] md:h-[650px] lg:h-[691px] bg-gradient-to-br from-[#043a72] to-[#032d5a] rounded-2xl sm:rounded-3xl shadow-2xl z-0 border border-blue-500/20">
+          <div className="relative w-full h-full flex justify-center items-center p-4 sm:p-6 md:p-8">
             {/* Subtle glow effect */}
             <div className="absolute inset-2 sm:inset-3 md:inset-4 bg-blue-400/10 rounded-2xl sm:rounded-3xl blur-xl z-0" />
 
-            <Image
-              src="/assets/InfoTwoStat.png"
-              alt="Statistics"
-              width={588}
-              height={691}
-              className="relative z-10 w-full h-full object-contain drop-shadow-2xl rounded-3xl"
-            />
+            {/* Three Statistics Images Layout */}
+            <div className="relative z-10 flex flex-col gap-2 sm:gap-3 w-full h-full">
+              {/* InfoStat1.png - Top */}
+              <div className="w-full flex-1 flex justify-center items-center">
+                <div className="relative border border-transparent group-hover:border-[#40B0FF42] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(64,176,255,0.6)] rounded-2xl">
+                  <Image
+                    src="/assets/InfoStat1.png"
+                    alt="Statistics 1"
+                    width={588}
+                    height={200}
+                    className="object-contain drop-shadow-2xl rounded-2xl"
+                  />
+                </div>
+              </div>
+
+              {/* InfoStat2.png and InfoStat3.png - Side by side */}
+              <div className="flex gap-4 sm:gap-6 flex-1">
+                {/* InfoStat2.png - Left */}
+                <div className="flex-1 flex justify-center items-center">
+                  <div className="relative border border-transparent group-hover:border-[#40B0FF42] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(64,176,255,0.6)] rounded-2xl">
+                    <Image
+                      src="/assets/InfoStat2.png"
+                      alt="Statistics 2"
+                      width={280}
+                      height={180}
+                      className="object-contain drop-shadow-2xl rounded-2xl"
+                    />
+                  </div>
+                </div>
+
+                {/* InfoStat3.png - Right */}
+                <div className="flex-1 flex justify-center items-center">
+                  <div className="relative border border-transparent group-hover:border-[#40B0FF42] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(64,176,255,0.6)] rounded-2xl">
+                    <Image
+                      src="/assets/InfoStat3.png"
+                      alt="Statistics 3"
+                      width={280}
+                      height={180}
+                      className="object-contain drop-shadow-2xl rounded-2xl"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
