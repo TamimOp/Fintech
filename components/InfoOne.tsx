@@ -13,6 +13,15 @@ export default function InfoOne() {
         className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-10 opacity-100 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-36 xl:h-36"
       />
 
+      {/* Subtract - Side by side of Sparkle */}
+      <Image
+        src="/assets/Subtract.svg"
+        alt="Subtract"
+        width={49}
+        height={49}
+        className="absolute top-4 right-20 sm:top-6 sm:right-24 md:top-8 md:right-32 lg:right-40 xl:right-44 z-10 opacity-100 w-6 h-6 sm:w-12 sm:h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 xl:w-12 xl:h-12"
+      />
+
       {/* Main Container */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-16">
         {/* Left Side: Phones with BG */}
