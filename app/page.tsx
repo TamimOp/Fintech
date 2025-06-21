@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import InfoOne from "@/components/InfoOne";
 import InfoThree from "@/components/InfoThree";
 import InfoTwo from "@/components/InfoTwo";
+import Pricing from "@/components/Pricing";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <InfoTwo />
       <InfoThree />
       <Expectation />
+      <Pricing />
     </main>
   );
 }
