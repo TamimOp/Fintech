@@ -4,6 +4,7 @@ import InfoOne from "@/components/InfoOne";
 import InfoThree from "@/components/InfoThree";
 import InfoTwo from "@/components/InfoTwo";
 import Pricing from "@/components/Pricing";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <InfoThree />
       <Expectation />
       <Pricing />
+      <WhyChooseUs />
     </main>
   );
 }
