@@ -9,7 +9,7 @@ export default function InfoOne() {
   const isInView = useInView(ref, {
     once: false,
     amount: 0.2,
-    margin: "-150px",
+    margin: "-120px",
   });
 
   return (
