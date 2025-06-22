@@ -1,9 +1,22 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function InfoOne() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: false,
+    amount: 0.3,
+    margin: "-100px",
+  });
+
   return (
-    <section className="relative overflow-hidden py-8 sm:py-12 md:py-16 lg:py-24 px-4 md:px-8 lg:px-16">
+    <section
+      ref={ref}
+      className="relative overflow-hidden py-8 sm:py-12 md:py-16 lg:py-24 px-4 md:px-8 lg:px-16"
+    >
       {/* Sparkle Top Right */}
       <Image
         src="/assets/InfoOneSparkle.svg"
@@ -31,33 +44,128 @@ export default function InfoOne() {
             <div className="absolute inset-2 sm:inset-3 md:inset-4 bg-blue-400/10 rounded-2xl sm:rounded-3xl blur-xl z-0" />
 
             {/* iPhone Container */}
-            <div className="relative w-[180px] sm:w-[220px] md:w-[280px] lg:w-[300px] h-full flex items-end justify-center p-4 sm:p-6 md:p-8">
-              {/* iPhone 1 - Back (rightmost) */}
-              <Image
-                src="/assets/iphone1.png"
-                alt="iPhone 1"
-                width={290}
-                height={595}
-                className="absolute z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[260px] xl:w-[290px] h-auto left-[40px] sm:left-auto sm:right-0 md:right-0 lg:right-0 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8"
-              />
+            <div className="relative w-[280px] sm:w-[320px] md:w-[380px] lg:w-[450px] h-full flex items-end justify-center p-4 sm:p-6 md:p-8">
+              {/* iPhone 1 - Back phone - Default: right stacked, Animated: stays right */}
+              <motion.div
+                initial={{
+                  rotate: 0,
+                  x: 0,
+                  y: 0,
+                  scale: 1,
+                }}
+                animate={
+                  isInView
+                    ? {
+                        rotate: 0,
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                      }
+                    : {
+                        rotate: 0,
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                      }
+                }
+                transition={{
+                  duration: 1.2,
+                  delay: 0.8,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                  type: "tween",
+                }}
+                className="absolute z-10 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 right-0 origin-bottom"
+              >
+                <Image
+                  src="/assets/iphone1.png"
+                  alt="iPhone 1"
+                  width={290}
+                  height={595}
+                  className="drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[260px] xl:w-[290px] h-auto"
+                />
+              </motion.div>
 
-              {/* iPhone 2 - Middle */}
-              <Image
-                src="/assets/iphone2.png"
-                alt="iPhone 2"
-                width={290}
-                height={595}
-                className="absolute z-20 drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[260px] xl:w-[290px] h-auto left-[32px] sm:left-auto sm:right-2.5 md:right-3 lg:right-[15px] bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8"
-              />
+              {/* iPhone 2 - Middle phone - Default: right stacked, Animated: rotates and moves to center-left */}
+              <motion.div
+                initial={{
+                  rotate: 0,
+                  x: 0,
+                  y: 0,
+                  scale: 1,
+                }}
+                animate={
+                  isInView
+                    ? {
+                        rotate: -10,
+                        x: -30,
+                        y: 0,
+                        scale: 1,
+                      }
+                    : {
+                        rotate: 0,
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                      }
+                }
+                transition={{
+                  duration: 1.4,
+                  delay: 1.0,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                  type: "tween",
+                }}
+                className="absolute z-20 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 origin-bottom"
+                style={{ right: "0px" }}
+              >
+                <Image
+                  src="/assets/iphone2.png"
+                  alt="iPhone 2"
+                  width={290}
+                  height={595}
+                  className="drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[260px] xl:w-[290px] h-auto"
+                />
+              </motion.div>
 
-              {/* iPhone 3 - Front (leftmost) */}
-              <Image
-                src="/assets/iphone3.png"
-                alt="iPhone 3"
-                width={290}
-                height={595}
-                className="absolute z-30 drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[260px] xl:w-[290px] h-auto left-[24px] sm:left-auto sm:right-5 md:right-6 lg:right-[30px] bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8"
-              />
+              {/* iPhone 3 - Front phone - Default: right stacked, Animated: rotates and moves to far left */}
+              <motion.div
+                initial={{
+                  rotate: 0,
+                  x: 0,
+                  y: 0,
+                  scale: 1,
+                }}
+                animate={
+                  isInView
+                    ? {
+                        rotate: -18,
+                        x: -50,
+                        y: 0,
+                        scale: 1,
+                      }
+                    : {
+                        rotate: 0,
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                      }
+                }
+                transition={{
+                  duration: 1.6,
+                  delay: 1.2,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                  type: "tween",
+                }}
+                className="absolute z-30 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 origin-bottom"
+                style={{ right: "0px" }}
+              >
+                <Image
+                  src="/assets/iphone3.png"
+                  alt="iPhone 3"
+                  width={290}
+                  height={595}
+                  className="drop-shadow-2xl hover:scale-105 transition-transform duration-300 w-[120px] sm:w-[160px] md:w-[220px] lg:w-[260px] xl:w-[290px] h-auto"
+                />
+              </motion.div>
             </div>
           </div>
         </div>
