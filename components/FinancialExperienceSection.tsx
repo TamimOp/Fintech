@@ -13,15 +13,23 @@ export default function FinancialExperienceSection() {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
       >
+        {/* Hero background image */}
+        <Image
+          src="/assets/heroBg.png"
+          alt="Hero background"
+          fill
+          className="absolute inset-0 object-cover pointer-events-none z-15 opacity-40"
+        />
+
         {/* Background overlay image */}
         <Image
           src="/assets/light2.png"
           alt="decorative bg"
           fill
-          className="absolute inset-0 object-cover pointer-events-none z-0"
+          className="absolute inset-0 object-cover pointer-events-none z-10"
         />
 
-        <div className="relative z-10 flex flex-col lg:flex-row items-end justify-between gap-16 min-h-[380px]">
+        <div className="relative z-20 flex flex-col lg:flex-row items-end justify-between gap-0 min-h-[380px]">
           {/* Text content */}
           <motion.div
             className="text-center lg:text-left lg:self-center flex-1"
@@ -50,13 +58,20 @@ export default function FinancialExperienceSection() {
               management software everything into one hassle free way.
             </motion.p>
             <motion.button
-              className="bg-gradient-to-r from-[#288DFF] to-[#527BFF] hover:opacity-90 text-white px-8 py-3 rounded-full text-base font-medium shadow-md transition duration-300"
+              className="bg-gradient-to-r from-[#288DFF] to-[#527BFF] text-white px-8 py-3 rounded-full text-base font-medium shadow-lg hover:shadow-xl transition-all duration-100 cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{
+                scale: 1.08,
+                boxShadow: "0 10px 30px rgba(40, 141, 255, 0.4)",
+                transition: { duration: 0.1 },
+              }}
+              whileTap={{
+                scale: 0.92,
+                transition: { duration: 0.05 },
+              }}
             >
               Get Started
             </motion.button>
