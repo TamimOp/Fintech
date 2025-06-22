@@ -8,8 +8,8 @@ export default function InfoOne() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: false,
-    amount: 0.3,
-    margin: "-100px",
+    amount: 0.2,
+    margin: "-150px",
   });
 
   return (
@@ -39,7 +39,7 @@ export default function InfoOne() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-16">
         {/* Left Side: Phones with BG */}
         <div className="flex justify-center items-center flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[588px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[691px] bg-gradient-to-br from-[#043a72] to-[#032d5a] rounded-2xl sm:rounded-3xl shadow-2xl z-0 border border-blue-500/20">
-          <div className="relative w-full h-full flex justify-center items-end">
+          <div className="relative w-full h-full flex justify-center items-end overflow-hidden">
             {/* Subtle glow effect */}
             <div className="absolute inset-2 sm:inset-3 md:inset-4 bg-blue-400/10 rounded-2xl sm:rounded-3xl blur-xl z-0" />
 
@@ -69,8 +69,8 @@ export default function InfoOne() {
                       }
                 }
                 transition={{
-                  duration: 1.2,
-                  delay: 0.8,
+                  duration: 1.0, // Slightly faster for reverse animation
+                  delay: isInView ? 0.8 : 0.2, // Faster delay when going back
                   ease: [0.25, 0.46, 0.45, 0.94],
                   type: "tween",
                 }}
@@ -109,8 +109,8 @@ export default function InfoOne() {
                       }
                 }
                 transition={{
-                  duration: 1.4,
-                  delay: 1.0,
+                  duration: 1.2,
+                  delay: isInView ? 1.0 : 0.1, // Much faster delay when closing
                   ease: [0.25, 0.46, 0.45, 0.94],
                   type: "tween",
                 }}
@@ -150,8 +150,8 @@ export default function InfoOne() {
                       }
                 }
                 transition={{
-                  duration: 1.6,
-                  delay: 1.2,
+                  duration: 1.4,
+                  delay: isInView ? 1.2 : 0, // No delay when closing for immediate effect
                   ease: [0.25, 0.46, 0.45, 0.94],
                   type: "tween",
                 }}
