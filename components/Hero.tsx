@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -28,29 +29,55 @@ export default function Hero() {
       </div>
 
       {/* Content Section */}
-      <div className="relative z-30 text-center max-w-4xl mx-auto">
+      <motion.div
+        className="relative z-30 text-center max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
         {/* Content */}
         <div className="relative z-10">
-          <h1 className="text-white text-3xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+          <motion.h1
+            className="text-white text-3xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             ONE PLATFORM TO POWER <br />
             EVERY FINANCIAL OPERATION IN <br />
             YOUR BUSINESS
-          </h1>
-          <p className="text-white/80 mb-8 text-xl drop-shadow-md">
+          </motion.h1>
+          <motion.p
+            className="text-white/80 mb-8 text-xl drop-shadow-md"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             End-to-end AP automation, global treasury, and faster receivables in
             one-click
-          </p>
-          <Link
-            href="#"
-            className="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-3 hover:scale-105 transition shadow-lg"
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Start free trial
-          </Link>
+            <Link
+              href="#"
+              className="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-3 hover:scale-105 transition shadow-lg"
+            >
+              Start free trial
+            </Link>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Dashboard Image - Separate from background */}
-      <div className="relative z-30 mt-15 w-full max-w-6xl">
+      <motion.div
+        className="relative z-30 mt-15 w-full max-w-6xl"
+        initial={{ opacity: 0, y: 60, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
         <Image
           src="/assets/heroStat.png"
           alt="Dashboard Statistics"
@@ -58,10 +85,15 @@ export default function Hero() {
           height={1200}
           className="relative w-full h-auto mx-auto drop-shadow-2xl"
         />
-      </div>
+      </motion.div>
 
       {/* Company Logos Section (Within same section) */}
-      <div className="relative z-30 mt-16 w-screen -mx-4 md:-mx-8">
+      <motion.div
+        className="relative z-30 mt-16 w-screen -mx-4 md:-mx-8"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.4 }}
+      >
         <div className="relative w-full py-6 bg-[#082E6459]">
           {/* Company Background Image */}
           <Image
@@ -73,19 +105,25 @@ export default function Hero() {
 
           {/* Company Logos */}
           <div className="relative z-10 flex items-center justify-center gap-12 md:gap-20 lg:gap-24 px-8">
-            {[1, 2, 3, 4, 5].map((num) => (
-              <Image
+            {[1, 2, 3, 4, 5].map((num, index) => (
+              <motion.div
                 key={num}
-                src={`/assets/company${num}.png`}
-                alt={`Company ${num}`}
-                width={120}
-                height={60}
-                className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
-              />
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+              >
+                <Image
+                  src={`/assets/company${num}.png`}
+                  alt={`Company ${num}`}
+                  width={120}
+                  height={60}
+                  className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                />
+              </motion.div>
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
