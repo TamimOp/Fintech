@@ -8,8 +8,8 @@ export default function InfoOne() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: false,
-    amount: 0.2,
-    margin: "-120px",
+    amount: 0.1,
+    margin: "-150px",
   });
 
   return (
@@ -57,7 +57,7 @@ export default function InfoOne() {
                   isInView
                     ? {
                         rotate: 0,
-                        x: 0,
+                        x: 10,
                         y: 0,
                         scale: 1,
                       }
@@ -69,12 +69,12 @@ export default function InfoOne() {
                       }
                 }
                 transition={{
-                  duration: 1.0, // Slightly faster for reverse animation
-                  delay: isInView ? 0.8 : 0.2, // Faster delay when going back
+                  duration: 1.0,
+                  delay: isInView ? 0.5 : 0.2,
                   ease: [0.25, 0.46, 0.45, 0.94],
                   type: "tween",
                 }}
-                className="absolute z-10 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 right-0 origin-bottom"
+                className="absolute z-10 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 right-9 origin-bottom"
               >
                 <Image
                   src="/assets/iphone1.png"
@@ -89,7 +89,7 @@ export default function InfoOne() {
               <motion.div
                 initial={{
                   rotate: 0,
-                  x: 0,
+                  x: 5,
                   y: 0,
                   scale: 1,
                 }}
@@ -97,7 +97,7 @@ export default function InfoOne() {
                   isInView
                     ? {
                         rotate: -10,
-                        x: -30,
+                        x: 10,
                         y: 0,
                         scale: 1,
                       }
@@ -109,13 +109,12 @@ export default function InfoOne() {
                       }
                 }
                 transition={{
-                  duration: 1.2,
-                  delay: isInView ? 1.0 : 0.1, // Much faster delay when closing
+                  duration: 1.0,
+                  delay: isInView ? 0.7 : 0.1,
                   ease: [0.25, 0.46, 0.45, 0.94],
                   type: "tween",
                 }}
-                className="absolute z-20 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 origin-bottom"
-                style={{ right: "0px" }}
+                className="absolute z-20 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 right-12 origin-bottom"
               >
                 <Image
                   src="/assets/iphone2.png"
@@ -138,7 +137,7 @@ export default function InfoOne() {
                   isInView
                     ? {
                         rotate: -18,
-                        x: -50,
+                        x: 0,
                         y: 0,
                         scale: 1,
                       }
@@ -150,13 +149,12 @@ export default function InfoOne() {
                       }
                 }
                 transition={{
-                  duration: 1.4,
-                  delay: isInView ? 1.2 : 0, // No delay when closing for immediate effect
+                  duration: 1.1,
+                  delay: isInView ? 0.9 : 0,
                   ease: [0.25, 0.46, 0.45, 0.94],
                   type: "tween",
                 }}
-                className="absolute z-30 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 origin-bottom"
-                style={{ right: "0px" }}
+                className="absolute z-30 bottom-4 sm:bottom-5 md:bottom-6 lg:bottom-8 right-15 origin-bottom"
               >
                 <Image
                   src="/assets/iphone3.png"
