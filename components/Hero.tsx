@@ -7,16 +7,17 @@ import { motion, type Variants } from "framer-motion";
 export default function Hero() {
   const starGlowVariants: Variants = {
     initial: {
-      opacity: 0.6,
-      filter: "drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 6px #00AAFF)",
+      opacity: 1,
+      filter:
+        "drop-shadow(0 0 8px #FFFFFF) drop-shadow(0 0 15px #00AAFF) drop-shadow(0 0 20px #0095FF)",
       scale: 1,
     },
     animate: {
-      opacity: [0.6, 1, 0.6],
+      opacity: [1, 1.2, 1],
       filter: [
-        "drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 6px #00AAFF)",
-        "drop-shadow(0 0 8px #FFFFFF) drop-shadow(0 0 15px #00AAFF) drop-shadow(0 0 25px #0095FF)",
-        "drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 6px #00AAFF)",
+        "drop-shadow(0 0 8px #FFFFFF) drop-shadow(0 0 15px #00AAFF) drop-shadow(0 0 20px #0095FF)",
+        "drop-shadow(0 0 15px #FFFFFF) drop-shadow(0 0 25px #00AAFF) drop-shadow(0 0 35px #0095FF)",
+        "drop-shadow(0 0 8px #FFFFFF) drop-shadow(0 0 15px #00AAFF) drop-shadow(0 0 20px #0095FF)",
       ],
       scale: [1, 1.05, 1],
       transition: {
@@ -29,16 +30,17 @@ export default function Hero() {
 
   const smallStarGlowVariants: Variants = {
     initial: {
-      opacity: 0.7,
-      filter: "drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 4px #00AAFF)",
+      opacity: 1,
+      filter:
+        "drop-shadow(0 0 6px #FFFFFF) drop-shadow(0 0 12px #00AAFF) drop-shadow(0 0 18px #0095FF)",
       scale: 1,
     },
     animate: {
-      opacity: [0.7, 1, 0.7],
+      opacity: [1, 1.3, 1],
       filter: [
-        "drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 4px #00AAFF)",
-        "drop-shadow(0 0 6px #FFFFFF) drop-shadow(0 0 12px #00AAFF) drop-shadow(0 0 20px #0095FF)",
-        "drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 4px #00AAFF)",
+        "drop-shadow(0 0 6px #FFFFFF) drop-shadow(0 0 12px #00AAFF) drop-shadow(0 0 18px #0095FF)",
+        "drop-shadow(0 0 12px #FFFFFF) drop-shadow(0 0 20px #00AAFF) drop-shadow(0 0 30px #0095FF)",
+        "drop-shadow(0 0 6px #FFFFFF) drop-shadow(0 0 12px #00AAFF) drop-shadow(0 0 18px #0095FF)",
       ],
       scale: [1, 1.1, 1],
       transition: {
@@ -93,7 +95,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Background Stars - Same as Footer */}
+      {/* Background Stars - Bright and Clear */}
       <motion.div
         className="absolute left-[10%] sm:left-[15%] lg:left-[220px] top-20 sm:top-24 lg:top-32 w-[80%] sm:w-[70%] lg:w-[999px] h-[200px] sm:h-[280px] lg:h-[364px] z-15 pointer-events-none"
         variants={starGlowVariants}
@@ -106,12 +108,12 @@ export default function Hero() {
           alt="Decorative background stars"
           width={999}
           height={364}
-          className="object-contain w-full h-full"
+          className="object-contain w-full h-full brightness-150 contrast-125"
           priority={false}
         />
       </motion.div>
 
-      {/* Small Decorative Stars */}
+      {/* Small Decorative Stars - Bright and Clear */}
       <motion.div
         className="absolute top-[200px] sm:top-[250px] lg:top-[300px] right-[10%] sm:right-[15%] lg:right-[200px] z-15 pointer-events-none"
         variants={smallStarGlowVariants}
@@ -124,7 +126,7 @@ export default function Hero() {
           alt="Decorative stars"
           width={35}
           height={40}
-          className="sm:w-[40px] sm:h-[45px] lg:w-[50px] lg:h-[56px]"
+          className="sm:w-[40px] sm:h-[45px] lg:w-[50px] lg:h-[56px] brightness-150 contrast-125"
         />
       </motion.div>
 
