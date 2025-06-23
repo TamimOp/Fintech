@@ -63,7 +63,7 @@ export default function Expectation() {
           whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.8)" }}
         >
           <motion.span
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-6xl font-bold mb-2"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
@@ -71,10 +71,10 @@ export default function Expectation() {
           >
             40%
           </motion.span>
-          <h4 className="text-base md:text-xl font-semibold">
+          <h4 className="text-base md:text-2xl font-semibold">
             Sales improvements
           </h4>
-          <p className="text-xs md:text-base text-white/70 text-center">
+          <p className="text-xs md:text-[14px] text-white/70 text-center">
             increasing sales performance for expansion
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export default function Expectation() {
           whileHover={{ scale: 1.05, backgroundColor: "#2563eb" }}
         >
           <motion.span
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-6xl font-bold mb-2"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.0 }}
@@ -97,8 +97,8 @@ export default function Expectation() {
           >
             45%
           </motion.span>
-          <h4 className="text-base md:text-xl font-semibold">Time saving</h4>
-          <p className="text-xs md:text-base text-white/70 text-center">
+          <h4 className="text-base md:text-2xl font-semibold">Time saving</h4>
+          <p className="text-xs md:text-[14px] text-white/70 text-center">
             It help to complete the task super fast.
           </p>
         </motion.div>
@@ -113,7 +113,7 @@ export default function Expectation() {
           whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.8)" }}
         >
           <motion.span
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-6xl font-bold mb-2"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.2 }}
@@ -121,10 +121,10 @@ export default function Expectation() {
           >
             34%
           </motion.span>
-          <h4 className="text-base md:text-xl font-semibold">
+          <h4 className="text-base md:text-2xl font-semibold">
             Transactions per day
           </h4>
-          <p className="text-xs md:text-base text-white/70 text-center">
+          <p className="text-xs md:text-[14px] text-white/70 text-center">
             Daily transactions for financial tracking
           </p>
         </motion.div>
@@ -139,7 +139,7 @@ export default function Expectation() {
           whileHover={{ scale: 1.05, backgroundColor: "#22d3ee" }}
         >
           <motion.span
-            className="text-4xl md:text-5xl font-bold mb-2"
+            className="text-4xl md:text-6xl font-bold mb-2"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.4 }}
@@ -147,8 +147,8 @@ export default function Expectation() {
           >
             90%
           </motion.span>
-          <h4 className="text-base md:text-xl font-semibold">Happy Client</h4>
-          <p className="text-xs md:text-base text-[#111]/70 text-center">
+          <h4 className="text-base md:text-2xl font-semibold">Happy Client</h4>
+          <p className="text-xs md:text-[14px] text-[#111]/70 text-center">
             90% of users of Zyvo are happy with the features.
           </p>
         </motion.div>

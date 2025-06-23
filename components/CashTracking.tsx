@@ -56,7 +56,7 @@ export default function CashTrackingSection() {
         viewport={{ once: true }}
       >
         <motion.h2
-          className="text-4xl font-bold leading-tight mb-4"
+          className="text-5xl font-bold leading-tight mb-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -65,7 +65,7 @@ export default function CashTrackingSection() {
           IN REAL TIME, SEE WHERE THE COMPANY&apos;S CASH IS SPENT.
         </motion.h2>
         <motion.p
-          className="text-gray-300 mb-6 max-w-lg"
+          className="text-gray-300 mb-6 max-w-lg text-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -76,7 +76,7 @@ export default function CashTrackingSection() {
         </motion.p>
         <motion.a
           href="#"
-          className="text-[#00F0FF] font-semibold mb-8 inline-block hover:underline"
+          className="text-[#00F0FF] font-semibold mb-8 inline-block hover:underline text-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
@@ -103,7 +103,7 @@ export default function CashTrackingSection() {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <h3 className="text-2xl font-semibold">{item.title}</h3>
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}

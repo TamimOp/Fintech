@@ -50,13 +50,25 @@ export default function Pricing() {
 
   return (
     <section className="relative overflow-hidden py-24 px-4 md:px-8 text-white text-center">
+      {/* Middle background blur */}
+      <div
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
+        style={{
+          width: "468px",
+          height: "449px",
+          borderRadius: "468px",
+          background: "rgba(0, 149, 255, 0.58)",
+          filter: "blur(169.3px)",
+        }}
+      />
+
       {/* Subtract and Sparkle */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute top-0 right-30 md:top-60 md:right-38"
+        className="absolute top-0 right-30 md:top-60 md:right-38 z-10"
       >
         <Image
           src="/assets/Subtract.svg"
@@ -71,7 +83,7 @@ export default function Pricing() {
         whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute top-0 right-0 md:top-60 md:right-10"
+        className="absolute top-0 right-0 md:top-60 md:right-10 z-10"
       >
         <Image
           src="/assets/InfoOneSparkle.svg"
@@ -83,7 +95,7 @@ export default function Pricing() {
 
       {/* Heading */}
       <motion.h2
-        className="text-3xl md:text-5xl font-bold mb-4"
+        className="text-3xl md:text-5xl font-bold mb-4 relative z-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -92,7 +104,7 @@ export default function Pricing() {
         CHOOSE YOUR RIGHT PLAN!
       </motion.h2>
       <motion.p
-        className="text-white/70 max-w-2xl mx-auto mb-8"
+        className="text-white/70 max-w-2xl mx-auto mb-8 text-xl"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}

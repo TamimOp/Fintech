@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
         WHY YOU HAVE TO CHOOSE US
       </motion.h2>
       <motion.p
-        className="text-white/70 max-w-2xl mx-auto mb-16"
+        className="text-white/70 max-w-2xl mx-auto mb-16 text-xl"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
