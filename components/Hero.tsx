@@ -2,9 +2,74 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 export default function Hero() {
+  const starGlowVariants: Variants = {
+    initial: {
+      opacity: 0.6,
+      filter: "drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 6px #00AAFF)",
+      scale: 1,
+    },
+    animate: {
+      opacity: [0.6, 1, 0.6],
+      filter: [
+        "drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 6px #00AAFF)",
+        "drop-shadow(0 0 8px #FFFFFF) drop-shadow(0 0 15px #00AAFF) drop-shadow(0 0 25px #0095FF)",
+        "drop-shadow(0 0 3px #FFFFFF) drop-shadow(0 0 6px #00AAFF)",
+      ],
+      scale: [1, 1.05, 1],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const smallStarGlowVariants: Variants = {
+    initial: {
+      opacity: 0.7,
+      filter: "drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 4px #00AAFF)",
+      scale: 1,
+    },
+    animate: {
+      opacity: [0.7, 1, 0.7],
+      filter: [
+        "drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 4px #00AAFF)",
+        "drop-shadow(0 0 6px #FFFFFF) drop-shadow(0 0 12px #00AAFF) drop-shadow(0 0 20px #0095FF)",
+        "drop-shadow(0 0 2px #FFFFFF) drop-shadow(0 0 4px #00AAFF)",
+      ],
+      scale: [1, 1.1, 1],
+      transition: {
+        duration: 2.5,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay: 0.5,
+      },
+    },
+  };
+
+  const subtractGlowVariants: Variants = {
+    initial: {
+      opacity: 0.7,
+      filter: "drop-shadow(0 0 5px #00FFFF)",
+    },
+    animate: {
+      opacity: [0.7, 1, 0.7],
+      filter: [
+        "drop-shadow(0 0 5px #00FFFF)",
+        "drop-shadow(0 0 15px #00FFFF) drop-shadow(0 0 25px #0095FF)",
+        "drop-shadow(0 0 5px #00FFFF)",
+      ],
+      transition: {
+        duration: 2.5,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 md:px-8 pt-40 pb-8 ">
       {/* Full Width Light Background */}
@@ -27,6 +92,59 @@ export default function Hero() {
           className="object-cover opacity-100"
         />
       </div>
+
+      {/* Background Stars - Same as Footer */}
+      <motion.div
+        className="absolute left-[10%] sm:left-[15%] lg:left-[220px] top-20 sm:top-24 lg:top-32 w-[80%] sm:w-[70%] lg:w-[999px] h-[200px] sm:h-[280px] lg:h-[364px] z-15 pointer-events-none"
+        variants={starGlowVariants}
+        initial="initial"
+        animate="animate"
+        aria-hidden="true"
+      >
+        <Image
+          src="/assets/footerBgStars.png"
+          alt="Decorative background stars"
+          width={999}
+          height={364}
+          className="object-contain w-full h-full"
+          priority={false}
+        />
+      </motion.div>
+
+      {/* Small Decorative Stars */}
+      <motion.div
+        className="absolute top-[200px] sm:top-[250px] lg:top-[300px] right-[10%] sm:right-[15%] lg:right-[200px] z-15 pointer-events-none"
+        variants={smallStarGlowVariants}
+        initial="initial"
+        animate="animate"
+        aria-hidden="true"
+      >
+        <Image
+          src="/assets/footerBgStars2.png"
+          alt="Decorative stars"
+          width={35}
+          height={40}
+          className="sm:w-[40px] sm:h-[45px] lg:w-[50px] lg:h-[56px]"
+        />
+      </motion.div>
+
+      {/* Decorative Subtract SVG */}
+      <motion.div
+        className="absolute left-[15%] sm:left-[20%] lg:left-[300px] top-[150px] sm:top-[180px] lg:top-[150px] z-15 w-[25px] sm:w-[35px] lg:w-[40.657px] h-[25px] sm:h-[35px] lg:h-[40.631px] pointer-events-none"
+        variants={subtractGlowVariants}
+        initial="initial"
+        animate="animate"
+        aria-hidden="true"
+      >
+        <Image
+          src="/assets/Subtract.svg"
+          alt="Decorative element"
+          width={40.657}
+          height={40.631}
+          className="w-full h-full"
+          style={{ fill: "#2FF" }}
+        />
+      </motion.div>
 
       {/* Content Section */}
       <motion.div
