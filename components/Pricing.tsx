@@ -56,7 +56,7 @@ export default function Pricing() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute top-60 right-38"
+        className="absolute top-0 right-30 md:top-60 md:right-38"
       >
         <Image
           src="/assets/Subtract.svg"
@@ -71,7 +71,7 @@ export default function Pricing() {
         whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute top-60 right-10"
+        className="absolute top-0 right-0 md:top-60 md:right-10"
       >
         <Image
           src="/assets/InfoOneSparkle.svg"

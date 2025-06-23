@@ -13,7 +13,7 @@ export default function InfoThree() {
         whileInView={{ opacity: 1, rotate: 360, scale: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="absolute top-60 right-10 z-10"
+        className="absolute top-0 right-0 md:top-60 md:right-10 z-10"
       >
         <Image
           src="/assets/InfoOneSparkle.svg"

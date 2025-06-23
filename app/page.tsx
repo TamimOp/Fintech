@@ -10,7 +10,7 @@ import FinancialExperienceSection from "@/components/FinancialExperienceSection"
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative overflow-hidden">
       <div className="relative">
         <Hero />
         <div
