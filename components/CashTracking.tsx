@@ -55,6 +55,7 @@ export default function CashTrackingSection() {
               width={585}
               height={725}
               className="rounded-xl object-cover w-full h-full"
+              style={{ objectPosition: "-200px center" }}
             />
           </motion.div>
 
