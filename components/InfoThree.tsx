@@ -157,7 +157,7 @@ export default function InfoThree() {
               whileHover={{ y: -5, rotate: 1 }}
             >
               <Image
-                src="/assets/galleryImage2.jpg"
+                src="/assets/galleryImage2.png"
                 alt="Gallery Image 2"
                 width={200}
                 height={340}
