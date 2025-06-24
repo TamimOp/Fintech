@@ -75,8 +75,7 @@ export default function Navbar() {
   };
 
   const handleDemoClick = () => {
-    // You can implement demo functionality here
-    console.log("Book a demo clicked");
+    router.push("/bookingDemo");
   };
 
   // Animation variants
