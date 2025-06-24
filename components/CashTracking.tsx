@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
@@ -74,7 +74,7 @@ export default function CashTrackingSection() {
 
           {/* Bottom Right Small Image */}
           <motion.div
-            className="absolute -bottom-4 -right-4 border-3 border-[#1E69F4] rounded-xl z-10"
+            className="absolute -bottom-8 -right-4 border-3 border-[#1E69F4] rounded-xl z-10"
             style={{ width: "174px", height: "186px" }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,6 +89,96 @@ export default function CashTrackingSection() {
               height={186}
               className="rounded-lg object-cover w-full h-full shadow-lg"
             />
+          </motion.div>
+
+          {/* Floating Notification Card 1 - Above Bottom Left Image */}
+          <motion.div
+            className="absolute bottom-25 left-4 z-20"
+            style={{
+              display: "flex",
+              width: "160px",
+              height: "59px",
+              padding: "6px 11px",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "2px",
+              flexShrink: 0,
+              borderRadius: "4px",
+              background: "#075CD6",
+              boxShadow: "5px 5px 11.8px 0px rgba(0, 59, 255, 0.49)",
+            }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+          >
+            {/* First Line - Status with check mark */}
+            <div className="flex items-center gap-1">
+              <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                <Check size={12} className="text-[#0067FF]" strokeWidth={2} />
+              </div>
+              <span className="text-white text-xs font-medium">
+                Green | Coffee
+              </span>
+            </div>
+
+            {/* Second Line - Payment Info */}
+            <div className="flex items-center justify-between w-full">
+              <div className="flex flex-col">
+                <span className="text-white text-xs font-medium">
+                  Jons miran
+                </span>
+                <span className="text-white/80 text-[10px]">
+                  Payment Received
+                </span>
+              </div>
+              <span className="text-white text-xs font-bold">$1300.99</span>
+            </div>
+          </motion.div>
+
+          {/* Floating Notification Card 2 - Above Bottom Right Image */}
+          <motion.div
+            className="absolute -bottom-8 right-12 z-20"
+            style={{
+              display: "flex",
+              width: "160px",
+              height: "59px",
+              padding: "6px 11px",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "2px",
+              flexShrink: 0,
+              borderRadius: "4px",
+              background: "#075CD6",
+              boxShadow: "5px 5px 11.8px 0px rgba(0, 59, 255, 0.49)",
+            }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+          >
+            {/* First Line - Status with check mark */}
+            <div className="flex items-center gap-1">
+              <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                <Check size={12} className="text-[#0067FF]" strokeWidth={2} />
+              </div>
+              <span className="text-white text-xs font-medium">
+                Tech | Software
+              </span>
+            </div>
+
+            {/* Second Line - Payment Info */}
+            <div className="flex items-center justify-between w-full">
+              <div className="flex flex-col">
+                <span className="text-white text-xs font-medium">
+                  Sarah Kim
+                </span>
+                <span className="text-white/80 text-[10px]">Payment Sent</span>
+              </div>
+              <span className="text-white text-xs font-bold">$850.00</span>
+            </div>
           </motion.div>
         </div>
       </motion.div>
