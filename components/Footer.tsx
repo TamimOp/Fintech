@@ -307,7 +307,7 @@ const Footer: React.FC = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/assets/ZyvoLogo.png"
+                src="/assets/logo.svg"
                 alt="Zyvo Logo"
                 width={40}
                 height={40}
@@ -384,7 +384,7 @@ const Footer: React.FC = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src="/assets/Zyvo.png"
+              src="/assets/Zyvo.svg"
               alt="Zyvo"
               width={80}
               height={32}
