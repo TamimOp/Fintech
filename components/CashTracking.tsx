@@ -28,7 +28,7 @@ export default function CashTrackingSection() {
 
   return (
     <section className="relative bg-[#050B1C] text-white py-20 px-6 md:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 overflow-hidden">
-      {/* Left Side - Combined Image and Floating Cards */}
+      {/* Left Side - Dynamic Image Layout */}
       <motion.div
         className="relative w-full h-full flex justify-center items-center"
         initial={{ opacity: 0, x: -50 }}
@@ -36,15 +36,61 @@ export default function CashTrackingSection() {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-          <Image
-            src="/assets/galleryImageLeft.png"
-            alt="Main graphic"
-            width={550}
-            height={550}
-            className="rounded-xl object-cover"
-          />
-        </motion.div>
+        <div className="relative">
+          {/* Main Large Image */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+            className="relative pl-[49px] pr-[42px] pb-[46px] pt-[2px]"
+            style={{ width: "585px", height: "725px" }}
+          >
+            <Image
+              src="/assets/galleryImageLeft1.jpg"
+              alt="Main graphic"
+              width={585}
+              height={725}
+              className="rounded-xl object-cover w-full h-full"
+            />
+          </motion.div>
+
+          {/* Bottom Left Small Image */}
+          <motion.div
+            className="absolute bottom-20 -left-10 z-10 border-3 border-[#1E69F4] rounded-xl"
+            style={{ width: "186px", height: "195px" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05, y: -5 }}
+          >
+            <Image
+              src="/assets/galleryImageLeft2.jpg"
+              alt="Bottom left graphic"
+              width={186}
+              height={195}
+              className="rounded-lg object-cover w-full h-full shadow-lg"
+            />
+          </motion.div>
+
+          {/* Bottom Right Small Image */}
+          <motion.div
+            className="absolute -bottom-4 -right-4 border-3 border-[#1E69F4] rounded-xl z-10"
+            style={{ width: "174px", height: "186px" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05, y: -5 }}
+          >
+            <Image
+              src="/assets/galleryImageLeft3.jpg"
+              alt="Bottom right graphic"
+              width={174}
+              height={186}
+              className="rounded-lg object-cover w-full h-full shadow-lg"
+            />
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* Right Side - Text & Accordions */}
