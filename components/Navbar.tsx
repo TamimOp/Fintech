@@ -23,12 +23,28 @@ const NAV_LINKS: NavLink[] = [
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>("features");
   const router = useRouter();
 
-  // Handle scroll effect
+  // Handle scroll effect and active section detection
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Detect active section
+      const sections = ["features", "solution", "resources", "pricing"];
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -230,7 +246,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               onClick={() => handleNavigation(link)}
             >
-              {link.hasIndicator && (
+              {link.scrollTo && activeSection === link.scrollTo && (
                 <motion.span
                   className="w-2 h-2 bg-cyan-400 rounded-full"
                   variants={indicatorVariants}
@@ -366,7 +382,7 @@ export default function Navbar() {
                       whileTap={{ scale: 0.95 }}
                       onClick={() => handleNavigation(link)}
                     >
-                      {link.hasIndicator && (
+                      {link.scrollTo && activeSection === link.scrollTo && (
                         <motion.span
                           className="w-2 h-2 bg-cyan-400 rounded-full"
                           variants={indicatorVariants}
@@ -466,7 +482,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               onClick={() => handleNavigation(link)}
             >
-              {link.hasIndicator && (
+              {link.scrollTo && activeSection === link.scrollTo && (
                 <motion.span
                   className="w-2 h-2 bg-cyan-400 rounded-full"
                   variants={indicatorVariants}

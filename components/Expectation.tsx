@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 export default function Expectation() {
   return (
-    <section className="relative overflow-hidden py-25 px-4 md:px-8 flex flex-col items-center text-center">
+    <section
+      className="relative overflow-hidden py-25 px-4 md:px-8 flex flex-col items-center text-center"
+      id="resources"
+    >
       {/* Sparkle Top Left */}
       <motion.div
         initial={{ opacity: 0, rotate: -180, scale: 0.5 }}

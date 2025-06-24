@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function FinancialExperienceSection() {
   return (
-    <section className="py-20 px-4" id="solution">
+    <section className="py-20 px-4">
       <motion.div
         className="max-w-6xl mx-auto relative rounded-[32px] overflow-hidden px-8 md:px-20 py-16 bg-[#0A1E49]"
         initial={{ opacity: 0, y: 50 }}

@@ -16,6 +16,7 @@ export default function InfoOne() {
     <section
       ref={ref}
       className="relative overflow-hidden py-8 sm:py-12 md:py-16 lg:py-24 px-4 md:px-8 lg:px-16"
+      id="features"
     >
       {/* Sparkle Top Right */}
       <Image

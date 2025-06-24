@@ -6,7 +6,10 @@ import { motion } from "framer-motion";
 
 export default function InfoThree() {
   return (
-    <section className="relative overflow-hidden py-20 px-4 md:px-16">
+    <section
+      className="relative overflow-hidden py-20 px-4 md:px-16"
+      id="solution"
+    >
       {/* Animated Sparkle */}
       <motion.div
         initial={{ opacity: 0, rotate: 0, scale: 0.5 }}
