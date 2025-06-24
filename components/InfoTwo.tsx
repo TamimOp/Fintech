@@ -43,90 +43,114 @@ export default function InfoTwo() {
 
       {/* Main Container */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-6 sm:gap-8 lg:gap-16">
-        {/* Right Side: Single Background with Three Statistics Images */}
+        {/* ✅ Right Side: Dynamic Glass Cards */}
         <motion.div
-          className="group flex justify-center items-center flex-shrink-0 w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[588px] h-[450px] sm:h-[550px] md:h-[650px] lg:h-[691px] bg-gradient-to-br from-[#043a72] to-[#032d5a] rounded-2xl sm:rounded-3xl shadow-2xl z-0 border border-blue-500/20"
+          className="flex flex-col justify-center w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[588px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[691px] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#043a72] to-[#032d5a] shadow-2xl z-0 border border-blue-500/20 my-8 p-6 sm:p-8 md:p-10 relative overflow-hidden gap-15 group"
           initial={{ opacity: 0, x: 100, scale: 0.8 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="relative w-full h-full flex justify-center items-center p-4 sm:p-6 md:p-8">
-            {/* Subtle glow effect */}
-            <motion.div
-              className="absolute inset-2 sm:inset-3 md:inset-4 bg-blue-400/10 rounded-2xl sm:rounded-3xl blur-xl z-0"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              viewport={{ once: true }}
+          {/* Top Card */}
+          <div className="relative bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-sm overflow-hidden flex flex-col items-start gap-2.5 flex-shrink-0 w-[507px] h-[262px] px-8 py-8 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300">
+            <div className="text-white/70 text-base">April, 2024</div>
+            <div className="text-4xl sm:text-[62px] font-bold text-white group-hover:text-[#22FFFF] duration-300">
+              $820.99
+            </div>
+            <div className="text-white/60 text-base">
+              From Our Latest Marketing Campaign
+            </div>
+            <Image
+              src="/assets/whiteLine.svg"
+              alt="White Line"
+              width={240}
+              height={220}
+              className="absolute -right-[6px] bottom-0 pointer-events-none"
             />
+            <Image
+              src="/assets/blueLine.svg"
+              alt="Blue Line"
+              width={240}
+              height={220}
+              className="absolute -right-[6px] bottom-0 pointer-events-none"
+            />
+          </div>
 
-            {/* Three Statistics Images Layout */}
-            <div className="relative z-10 flex flex-col gap-2 sm:gap-3 w-full h-full">
-              {/* InfoStat1.png - Top */}
-              <motion.div
-                className="w-full flex-1 flex justify-center items-center"
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <div className="relative border border-transparent group-hover:border-[#40B0FF42] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(64,176,255,0.6)] rounded-2xl">
-                  <Image
-                    src="/assets/InfoStat1.png"
-                    alt="Statistics 1"
-                    width={588}
-                    height={200}
-                    className="object-contain drop-shadow-2xl rounded-2xl"
-                  />
+          {/* Bottom Cards */}
+          <div className="flex flex-col sm:flex-row gap-6">
+            {/* Chart Card */}
+            <div className="bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-sm flex flex-col justify-center items-start gap-0 flex-shrink-0 w-[247px] h-[246px] px-6 py-3 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300">
+              <div className="text-white/70 text-base mb-1">Monthly Sales</div>
+              <div className="text-[40px] font-bold text-white mb-2 ">
+                2.25K
+              </div>
+              <div className="relative">
+                <Image
+                  src="/assets/chart.svg"
+                  alt="Chart"
+                  width={200}
+                  height={80}
+                  className="w-full object-contain group-hover:opacity-0 transition-opacity duration-300"
+                />
+                <Image
+                  src="/assets/chartCyan.svg"
+                  alt="Chart Cyan"
+                  width={200}
+                  height={80}
+                  className="w-full object-contain absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Profile Card */}
+            <div className="bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-sm flex flex-col justify-center items-start gap-0 flex-shrink-0 w-[247px] h-[246px] px-6 py-3 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300">
+              <div className="text-white/70 text-base mb-1">June 2024</div>
+              <div className="text-[40px] font-bold text-white mb-4">6.56K</div>
+              <div className="flex items-center gap-2 mb-3">
+                <Image
+                  src="/assets/dp1.png"
+                  alt="Will Smith"
+                  width={32}
+                  height={32}
+                  className="rounded-full w-8 h-8 object-cover"
+                />
+                <div className="text-white/80 text-xs">
+                  <div className="font-semibold text-xl">Will Smith</div>
+                  <div className="text-white/50 text-base">2.5k Seals</div>
                 </div>
-              </motion.div>
-
-              {/* InfoStat2.png and InfoStat3.png - Side by side */}
-              <div className="flex gap-4 sm:gap-6 flex-1">
-                {/* InfoStat2.png - Left */}
-                <motion.div
-                  className="flex-1 flex justify-center items-center"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative border border-transparent group-hover:border-[#40B0FF42] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(64,176,255,0.6)] rounded-2xl">
-                    <Image
-                      src="/assets/InfoStat2.png"
-                      alt="Statistics 2"
-                      width={280}
-                      height={180}
-                      className="object-contain drop-shadow-2xl rounded-2xl"
-                    />
-                  </div>
-                </motion.div>
-
-                {/* InfoStat3.png - Right */}
-                <motion.div
-                  className="flex-1 flex justify-center items-center"
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.9 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative border border-transparent group-hover:border-[#40B0FF42] transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(64,176,255,0.6)] rounded-2xl">
-                    <Image
-                      src="/assets/InfoStat3.png"
-                      alt="Statistics 3"
-                      width={280}
-                      height={180}
-                      className="object-contain drop-shadow-2xl rounded-2xl"
-                    />
-                  </div>
-                </motion.div>
+                <Image
+                  src="/assets/dp1LightblueLine.svg"
+                  alt="Light Blue Line"
+                  width={24}
+                  height={24}
+                  className="ml-4"
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/assets/dp2.png"
+                  alt="Jack Grelish"
+                  width={32}
+                  height={32}
+                  className="rounded-full w-8 h-8 object-cover"
+                />
+                <div className="text-white/80 text-xs">
+                  <div className="font-semibold text-xl">Jack Grelish</div>
+                  <div className="text-white/50 text-base">2.5k Seals</div>
+                </div>
+                <Image
+                  src="/assets/dp2LightblueLine.svg"
+                  alt="Light Blue Line"
+                  width={24}
+                  height={24}
+                  className="ml-2"
+                />
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Left Side: Text & Icons */}
+        {/* ✅ Left Side: 100% your original left side unchanged */}
         <motion.div
           className="flex flex-col items-start gap-4 sm:gap-6 lg:gap-8 w-full max-w-[621px] text-white px-1 md:px-0"
           initial={{ opacity: 0, x: -100 }}
@@ -134,6 +158,7 @@ export default function InfoTwo() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true, margin: "-100px" }}
         >
+          {/* EXACT LEFT SIDE FROM YOUR VERSION */}
           <motion.h2
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight"
             initial={{ opacity: 0, y: 30 }}
