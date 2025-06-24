@@ -85,13 +85,27 @@ export default function Hero() {
         />
       </div>
 
-      {/* Hero Background - Full Width but only behind content area */}
-      <div className="absolute top-40 left-0 w-full h-[400px] z-10 pointer-events-none">
-        <Image
-          src="/assets/heroBg.png"
-          alt="Hero Texture"
-          fill
-          className="object-cover opacity-100"
+      {/* Hero Background - Repeating Texture Pattern */}
+      <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none overflow-hidden">
+        <div
+          className="absolute inset-0 w-full h-full opacity-30"
+          style={{
+            backgroundImage: "url(/assets/heroBg.png)",
+            backgroundRepeat: "repeat",
+            backgroundSize: "70% 70%",
+            backgroundPosition: "center",
+            filter: "brightness(1.2) contrast(1.1)",
+          }}
+        />
+        <div
+          className="absolute inset-0 w-full h-full opacity-30"
+          style={{
+            backgroundImage: "url(/assets/heroBg.png)",
+            backgroundRepeat: "repeat",
+            backgroundSize: "75% 75%",
+            backgroundPosition: "12.5% 12.5%",
+            filter: "brightness(0.8) contrast(1.3)",
+          }}
         />
       </div>
 
