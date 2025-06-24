@@ -195,6 +195,45 @@ export default function CashTrackingSection() {
               </span>
             </div>
           </motion.div>
+
+          {/* Floating Notification Card 3 - On Large Image */}
+          <motion.div
+            className="absolute top-16 sm:top-20 md:top-24 lg:top-40 right-4 sm:right-6 md:right-8 lg:right-30 z-20"
+            style={{
+              display: "flex",
+              width: "122px",
+              height: "38px",
+              padding: "6px 11px",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "flex-start",
+              gap: "10px",
+              flexShrink: 0,
+              borderRadius: "4px",
+              background: "#075CD6",
+              boxShadow: "5px 5px 11.8px 0px rgba(0, 59, 255, 0.49)",
+            }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.4 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <div className="flex items-center justify-between w-full gap-2">
+              {/* Left Side - Dollar Circle */}
+              <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-[#1E69F4] text-[8px] font-bold">$</span>
+              </div>
+
+              {/* Right Side - Amount and Status */}
+              <div className="flex flex-col items-end min-w-0">
+                <span className="text-white text-[10px] font-bold">
+                  $2300.55
+                </span>
+                <span className="text-white/80 text-[8px]">Payment Sent</span>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </motion.div>
 
