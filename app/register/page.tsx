@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export default function LoginSection() {
-  const [isSignIn, setIsSignIn] = useState(true);
+  const [isSignIn, setIsSignIn] = useState(false);
 
   return (
     <section className="relative overflow-hidden bg-[#01194C] text-white pt-40 pb-20 px-6 md:px-20 min-h-screen flex items-center">
