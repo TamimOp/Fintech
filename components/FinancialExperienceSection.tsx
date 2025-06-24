@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function FinancialExperienceSection() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4" id="solution">
       <motion.div
         className="max-w-6xl mx-auto relative rounded-[32px] overflow-hidden px-8 md:px-20 py-16 bg-[#0A1E49]"
         initial={{ opacity: 0, y: 50 }}
@@ -73,7 +74,7 @@ export default function FinancialExperienceSection() {
                 transition: { duration: 0.05 },
               }}
             >
-              Get Started
+              <Link href="/register">Get Started</Link>
             </motion.button>
           </motion.div>
 

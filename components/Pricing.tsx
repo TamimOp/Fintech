@@ -49,7 +49,10 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-24 px-4 md:px-8 text-white text-center">
+    <section
+      className="relative overflow-hidden py-24 px-4 md:px-8 text-white text-center"
+      id="pricing"
+    >
       {/* Middle background blur */}
       <div
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"

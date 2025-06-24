@@ -196,7 +196,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Link
-              href="#"
+              href="/register"
               className="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-3 hover:scale-105 transition shadow-lg"
             >
               Start free trial

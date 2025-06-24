@@ -27,7 +27,10 @@ export default function CashTrackingSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="relative bg-[#050B1C] text-white py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 overflow-hidden">
+    <section
+      className="relative bg-[#050B1C] text-white py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-12 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 overflow-hidden"
+      id="resources"
+    >
       {/* Left Side - Dynamic Image Layout */}
       <motion.div
         className="relative w-full h-full flex justify-center items-center order-2 lg:order-1"

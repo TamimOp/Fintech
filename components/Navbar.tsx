@@ -3,24 +3,27 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface NavLink {
   label: string;
-  href: string;
+  href?: string;
+  scrollTo?: string;
   hasIndicator?: boolean;
 }
 
 const NAV_LINKS: NavLink[] = [
-  { label: "Feature", href: "/features", hasIndicator: true },
-  { label: "Solution", href: "/solution" },
-  { label: "Resources", href: "/resources" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Feature", scrollTo: "features", hasIndicator: true },
+  { label: "Solution", scrollTo: "solution" },
+  { label: "Resources", scrollTo: "resources" },
+  { label: "Pricing", scrollTo: "pricing" },
   { label: "Login", href: "/login" },
 ];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const router = useRouter();
 
   // Handle scroll effect
   useEffect(() => {
@@ -31,6 +34,34 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Handle navigation
+  const handleNavigation = (link: NavLink) => {
+    if (link.href) {
+      router.push(link.href);
+    } else if (link.scrollTo) {
+      const element = document.getElementById(link.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsMenuOpen(false); // Close mobile menu
+  };
+
+  // Handle logo click
+  const handleLogoClick = () => {
+    router.push("/");
+  };
+
+  // Handle button clicks
+  const handleRegisterClick = () => {
+    router.push("/register");
+  };
+
+  const handleDemoClick = () => {
+    // You can implement demo functionality here
+    console.log("Book a demo clicked");
+  };
 
   // Animation variants
   const navbarVariants: Variants = {
@@ -162,8 +193,9 @@ export default function Navbar() {
       >
         {/* Logo */}
         <motion.div
-          className="flex items-center flex-shrink-0"
+          className="flex items-center flex-shrink-0 cursor-pointer"
           variants={itemVariants}
+          onClick={handleLogoClick}
         >
           <motion.div
             variants={logoVariants}
@@ -196,6 +228,7 @@ export default function Navbar() {
                 transition: { duration: 0.2 },
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => handleNavigation(link)}
             >
               {link.hasIndicator && (
                 <motion.span
@@ -225,6 +258,7 @@ export default function Navbar() {
             initial="initial"
             whileHover="hover"
             whileTap="tap"
+            onClick={handleRegisterClick}
             className="bg-white text-blue-900 rounded-full px-6 py-2.5 font-medium text-sm whitespace-nowrap shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             Start free trial
@@ -234,6 +268,7 @@ export default function Navbar() {
             initial="initial"
             whileHover="hover"
             whileTap="tap"
+            onClick={handleDemoClick}
             className="border border-white text-white rounded-full px-6 py-2.5 font-medium text-sm whitespace-nowrap hover:bg-white/10 transition-colors duration-300"
           >
             Book a demo
@@ -254,7 +289,11 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between px-4 sm:px-6 py-4">
           {/* Logo */}
-          <motion.div className="flex items-center" variants={itemVariants}>
+          <motion.div
+            className="flex items-center cursor-pointer"
+            variants={itemVariants}
+            onClick={handleLogoClick}
+          >
             <motion.div
               variants={logoVariants}
               initial="initial"
@@ -325,6 +364,7 @@ export default function Navbar() {
                         transition: { duration: 0.2 },
                       }}
                       whileTap={{ scale: 0.95 }}
+                      onClick={() => handleNavigation(link)}
                     >
                       {link.hasIndicator && (
                         <motion.span
@@ -349,6 +389,7 @@ export default function Navbar() {
                     initial="initial"
                     whileHover="hover"
                     whileTap="tap"
+                    onClick={handleRegisterClick}
                     className="w-full bg-white text-blue-900 rounded-full px-6 py-3 font-medium text-sm shadow-lg"
                   >
                     Start free trial
@@ -358,6 +399,7 @@ export default function Navbar() {
                     initial="initial"
                     whileHover="hover"
                     whileTap="tap"
+                    onClick={handleDemoClick}
                     className="w-full border border-white text-white rounded-full px-6 py-3 font-medium text-sm hover:bg-white/10 transition-colors duration-300"
                   >
                     Book a demo
@@ -387,8 +429,9 @@ export default function Navbar() {
       >
         {/* Logo */}
         <motion.div
-          className="flex items-center flex-shrink-0"
+          className="flex items-center flex-shrink-0 cursor-pointer"
           variants={itemVariants}
+          onClick={handleLogoClick}
         >
           <motion.div
             variants={logoVariants}
@@ -421,6 +464,7 @@ export default function Navbar() {
                 transition: { duration: 0.2 },
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => handleNavigation(link)}
             >
               {link.hasIndicator && (
                 <motion.span
@@ -453,6 +497,7 @@ export default function Navbar() {
               transition: { duration: 0.2 },
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => handleNavigation({ label: "Login", href: "/login" })}
           >
             Login
           </motion.button>
@@ -461,6 +506,7 @@ export default function Navbar() {
             initial="initial"
             whileHover="hover"
             whileTap="tap"
+            onClick={handleRegisterClick}
             className="bg-white text-blue-900 rounded-full px-4 py-2 font-medium text-sm whitespace-nowrap shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             Start trial
