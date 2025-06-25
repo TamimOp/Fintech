@@ -315,7 +315,7 @@ export default function Navbar() {
               whileHover="hover"
             >
               <Image
-                src="/assets/logo.png"
+                src="/assets/logo.svg"
                 alt="Logo"
                 width={28}
                 height={28}
