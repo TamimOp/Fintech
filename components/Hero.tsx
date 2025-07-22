@@ -81,7 +81,7 @@ export default function Hero() {
           alt="Light Effect"
           width={2000}
           height={1200}
-          className="w-full h-full object-cover opacity-100"
+          className="w-full h-[1200px] md:h-full object-fill opacity-100"
         />
       </div>
 
