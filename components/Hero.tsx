@@ -238,7 +238,7 @@ export default function Hero() {
           />
 
           {/* Company Logos */}
-          <div className="relative z-10 flex items-center justify-center gap-12 md:gap-20 lg:gap-24 px-8">
+          <div className="relative z-10 flex items-center justify-center gap-8 md:gap-20 lg:gap-24 px-8">
             {[1, 2, 3, 4, 5].map((num, index) => (
               <motion.div
                 key={num}
@@ -251,7 +251,7 @@ export default function Hero() {
                   alt={`Company ${num}`}
                   width={120}
                   height={60}
-                  className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  className="h-4 md:h-8 w-10 md:w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
                 />
               </motion.div>
             ))}
