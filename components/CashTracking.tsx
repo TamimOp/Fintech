@@ -97,11 +97,10 @@ export default function CashTrackingSection() {
 
           {/* Floating Notification Card 1 - Above Bottom Left Image */}
           <motion.div
-            className="absolute bottom-32 sm:bottom-40 md:bottom-48 lg:bottom-25 left-0 sm:left-2 md:left-3 lg:left-4 z-20 w-[130px] sm:w-[140px] md:w-[150px] lg:w-[160px]"
+            className="absolute bottom-32 sm:bottom-40 md:bottom-48 lg:bottom-25 left-0 sm:left-2 md:left-3 lg:left-4 z-20 w-full max-w-[160px] min-w-0 overflow-hidden"
             style={{
               display: "flex",
-              height: "min(59px, 12vw)",
-              padding: "min(6px, 1.2vw) min(11px, 2.2vw)",
+              padding: "min(6px, 1.2vw) min(8px, 2vw)",
               flexDirection: "column",
               alignItems: "flex-start",
               gap: "2px",
@@ -117,30 +116,30 @@ export default function CashTrackingSection() {
             whileHover={{ scale: 1.05 }}
           >
             {/* First Line - Status with check mark */}
-            <div className="flex items-center gap-1">
-              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full flex items-center justify-center">
+            <div className="flex items-center gap-1 min-w-0 w-full">
+              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                 <Check
                   size={8}
                   className="sm:size-3 text-[#0067FF]"
                   strokeWidth={2}
                 />
               </div>
-              <span className="text-white text-[10px] sm:text-xs font-medium truncate">
+              <span className="text-white text-[10px] sm:text-xs font-medium truncate min-w-0 break-words">
                 Green | Coffee
               </span>
             </div>
 
             {/* Second Line - Payment Info */}
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between w-full min-w-0">
               <div className="flex flex-col min-w-0">
-                <span className="text-white text-[10px] sm:text-xs font-medium truncate">
+                <span className="text-white text-[10px] sm:text-xs font-medium truncate min-w-0 break-words">
                   Jons miran
                 </span>
-                <span className="text-white/80 text-[8px] sm:text-[10px] truncate">
+                <span className="text-white/80 text-[8px] sm:text-[10px] truncate min-w-0 break-words">
                   Payment Received
                 </span>
               </div>
-              <span className="text-white text-[10px] sm:text-xs font-bold ml-1">
+              <span className="text-white text-[10px] sm:text-xs font-bold ml-1 truncate min-w-0 break-words">
                 $1300.99
               </span>
             </div>
@@ -148,10 +147,9 @@ export default function CashTrackingSection() {
 
           {/* Floating Notification Card 2 - Above Bottom Right Image */}
           <motion.div
-            className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:-bottom-8 right-8 sm:right-10 md:right-11 lg:right-12 z-20 w-[130px] sm:w-[140px] md:w-[150px] lg:w-[160px]"
+            className="absolute bottom-16 sm:bottom-20 md:bottom-24 lg:-bottom-8 right-8 sm:right-10 md:right-11 lg:right-12 z-20 w-full max-w-[160px] min-w-0 overflow-hidden"
             style={{
               display: "flex",
-              height: "min(59px, 12vw)",
               padding: "min(6px, 1.2vw) min(11px, 2.2vw)",
               flexDirection: "column",
               alignItems: "flex-start",
@@ -168,30 +166,30 @@ export default function CashTrackingSection() {
             whileHover={{ scale: 1.05 }}
           >
             {/* First Line - Status with check mark */}
-            <div className="flex items-center gap-1">
-              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full flex items-center justify-center">
+            <div className="flex items-center gap-1 min-w-0 w-full">
+              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full flex items-center justify-center flex-shrink-0">
                 <Check
                   size={8}
                   className="sm:size-3 text-[#0067FF]"
                   strokeWidth={2}
                 />
               </div>
-              <span className="text-white text-[10px] sm:text-xs font-medium truncate">
+              <span className="text-white text-[10px] sm:text-xs font-medium truncate min-w-0 break-words">
                 Tech | Software
               </span>
             </div>
 
             {/* Second Line - Payment Info */}
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between w-full min-w-0">
               <div className="flex flex-col min-w-0">
-                <span className="text-white text-[10px] sm:text-xs font-medium truncate">
+                <span className="text-white text-[10px] sm:text-xs font-medium truncate min-w-0 break-words">
                   Sarah Kim
                 </span>
-                <span className="text-white/80 text-[8px] sm:text-[10px] truncate">
+                <span className="text-white/80 text-[8px] sm:text-[10px] truncate min-w-0 break-words">
                   Payment Sent
                 </span>
               </div>
-              <span className="text-white text-[10px] sm:text-xs font-bold ml-1">
+              <span className="text-white text-[10px] sm:text-xs font-bold ml-1 truncate min-w-0 break-words">
                 $850.00
               </span>
             </div>
