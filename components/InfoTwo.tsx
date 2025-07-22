@@ -45,14 +45,14 @@ export default function InfoTwo() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-6 sm:gap-8 lg:gap-16">
         {/* ✅ Right Side: Dynamic Glass Cards - Responsive */}
         <motion.div
-          className="flex flex-col justify-center w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[588px] min-h-[500px] sm:min-h-[600px] md:min-h-[650px] lg:h-[691px] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#043a72] to-[#032d5a] shadow-2xl z-0 border border-blue-500/20 my-8 p-4 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden gap-4 sm:gap-6 lg:gap-15 group"
+          className="flex flex-col justify-center w-full max-w-full sm:max-w-[400px] md:max-w-[500px] lg:max-w-[588px] min-h-[400px] sm:min-h-[600px] md:min-h-[650px] lg:h-[691px] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#043a72] to-[#032d5a] shadow-2xl z-0 border border-blue-500/20 my-4 sm:my-8 p-3 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden gap-3 sm:gap-6 lg:gap-15 group"
           initial={{ opacity: 0, x: 100, scale: 0.8 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Top Card - Responsive */}
-          <div className="relative bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-md overflow-hidden flex flex-col items-start gap-2.5 flex-shrink-0 w-full max-w-[507px] h-[200px] sm:h-[230px] md:h-[250px] lg:h-[262px] px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 mx-auto">
+          <div className="relative bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-md overflow-hidden flex flex-col items-start gap-2 flex-shrink-0 w-full max-w-full sm:max-w-[507px] min-h-[120px] sm:min-h-[230px] md:min-h-[250px] lg:h-[262px] px-3 sm:px-6 md:px-8 py-3 sm:py-6 md:py-8 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 mx-auto">
             <div className="text-white/70 text-sm sm:text-base">
               April, 2024
             </div>
@@ -79,9 +79,9 @@ export default function InfoTwo() {
           </div>
 
           {/* Bottom Cards - Responsive */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 w-full justify-center">
             {/* Chart Card - Responsive */}
-            <div className="bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-md flex flex-col justify-center items-start gap-0 flex-shrink-0 w-full max-w-[247px] h-[180px] sm:h-[200px] md:h-[220px] lg:h-[246px] px-4 sm:px-6 py-3 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 mx-auto sm:mx-0">
+            <div className="bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-md flex flex-col justify-center items-start gap-0 flex-shrink-0 w-full max-w-full sm:max-w-[247px] min-h-[100px] sm:h-[200px] md:h-[220px] lg:h-[246px] px-3 sm:px-6 py-3 sm:py-3 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 mx-auto sm:mx-0">
               <div className="text-white/70 text-xs sm:text-sm md:text-base mb-1">
                 Monthly Sales
               </div>
@@ -107,7 +107,7 @@ export default function InfoTwo() {
             </div>
 
             {/* Profile Card - Responsive */}
-            <div className="bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-md flex flex-col justify-center items-start gap-0 flex-shrink-0 w-full max-w-[247px] h-[180px] sm:h-[200px] md:h-[220px] lg:h-[246px] px-4 sm:px-6 py-3 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 mx-auto sm:mx-0">
+            <div className="bg-[#081E404F] backdrop-blur-md rounded-2xl shadow-md flex flex-col justify-center items-start gap-0 flex-shrink-0 w-full max-w-full sm:max-w-[247px] min-h-[100px] sm:h-[200px] md:h-[220px] lg:h-[246px] px-3 sm:px-6 py-3 sm:py-3 group-hover:border-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 mx-auto sm:mx-0">
               <div className="text-white/70 text-xs sm:text-sm md:text-base mb-1">
                 June 2024
               </div>
