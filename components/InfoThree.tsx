@@ -134,9 +134,10 @@ export default function InfoThree() {
             <Image
               src="/assets/galleryImage1.jpg"
               alt="Gallery Image 1"
-              width={436}
-              height={605}
+              width={900}
+              height={1200}
               className="rounded-xl object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 436px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
@@ -162,9 +163,10 @@ export default function InfoThree() {
               <Image
                 src="/assets/galleryImage2.png"
                 alt="Gallery Image 2"
-                width={200}
+                width={436} // Increased for desktop clarity
                 height={340}
                 className="rounded-xl object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 218px"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
@@ -180,9 +182,10 @@ export default function InfoThree() {
               <Image
                 src="/assets/galleryImage3.jpg"
                 alt="Gallery Image 3"
-                width={200}
+                width={436} // Increased for desktop clarity
                 height={340}
                 className="rounded-xl object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, 218px"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
