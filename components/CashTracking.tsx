@@ -52,10 +52,11 @@ export default function CashTrackingSection() {
             <Image
               src="/assets/galleryImageLeft1.jpg"
               alt="Main graphic"
-              width={585}
-              height={725}
+              width={1200} // Use a higher value, e.g. 1200 or more
+              height={1500}
               className="rounded-xl object-cover w-full h-full"
               style={{ objectPosition: "-200px center" }}
+              sizes="(max-width: 768px) 100vw, 585px"
             />
           </motion.div>
 
@@ -71,8 +72,8 @@ export default function CashTrackingSection() {
             <Image
               src="/assets/galleryImageLeft2.jpg"
               alt="Bottom left graphic"
-              width={186}
-              height={195}
+              width={372} // 2x of 186px for retina screens
+              height={390}
               className="rounded-lg object-cover w-full h-full shadow-lg"
             />
           </motion.div>
@@ -89,8 +90,8 @@ export default function CashTrackingSection() {
             <Image
               src="/assets/galleryImageLeft3.jpg"
               alt="Bottom right graphic"
-              width={174}
-              height={186}
+              width={348} // 2x of 174px for retina screens
+              height={372}
               className="rounded-lg object-cover w-full h-full shadow-lg"
             />
           </motion.div>
