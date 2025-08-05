@@ -14,15 +14,11 @@ export default function Home() {
       <div className="relative">
         <Hero />
         <div
-          className="absolute -left-100 pointer-events-none z-10"
+          className="absolute -left-100 pointer-events-none z-10 w-[656px] h-[628px] rounded-full shrink-0"
           style={{
             bottom: "-450px",
-            width: "656px",
-            height: "628px",
-            borderRadius: "656px",
             background: "rgba(0, 149, 255, 0.58)",
             filter: "blur(166.85px)",
-            flexShrink: 0,
           }}
         />
       </div>
@@ -30,15 +26,11 @@ export default function Home() {
         <div className="relative">
           <InfoOne />
           <div
-            className="absolute -right-100 pointer-events-none z-0"
+            className="absolute -right-100 pointer-events-none z-0 w-[656px] h-[628px] rounded-full shrink-0"
             style={{
               bottom: "-450px",
-              width: "656px",
-              height: "628px",
-              borderRadius: "656px",
               background: "rgba(0, 149, 255, 0.58)",
               filter: "blur(166.85px)",
-              flexShrink: 0,
             }}
           />
         </div>
@@ -46,15 +38,11 @@ export default function Home() {
         <div className="relative">
           <InfoThree />
           <div
-            className="absolute -left-100 pointer-events-none z-0"
+            className="absolute -left-100 pointer-events-none z-0 w-[656px] h-[628px] rounded-full shrink-0"
             style={{
               bottom: "-450px",
-              width: "656px",
-              height: "628px",
-              borderRadius: "656px",
               background: "rgba(0, 149, 255, 0.58)",
               filter: "blur(166.85px)",
-              flexShrink: 0,
             }}
           />
         </div>
